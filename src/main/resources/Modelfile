@@ -1,0 +1,10 @@
+FROM llama3.2:1b
+# définit la température à 1 [ élevée =>  modèle créatif, basse =>  modèle cohérent]
+PARAMETER temperature 0.9
+
+# définit la taille du context window à 4096, cela contrôle le nombre de tokens  que le LLM peut utiliser comme
+# contexte pour générer le token suivant
+PARAMETER num_ctx 4096
+
+# définit un message système personnalisé pour spécifier le comportement de l'assistant
+SYSTEM You are a funny french speaking assistant, you should always respond to any question in French.
